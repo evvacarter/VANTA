@@ -1,0 +1,291 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height:40px;
+    width: 100%;
+    background-color: #f5f1E6;
+    color: #45664A;
+}
+
+
+.logo{
+    margin-left: 20px;
+    font-size: 60px;
+}
+.nav-links a{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.nav-links a{
+    position: relative;
+    text-decoration: none;
+    color:#45664A;
+    font-size: 20px;
+    padding: 10px;
+}
+.nav-links a, .logo {
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "DM Sans", sans-serif;
+    margin-right: 20px; 
+    display: inline-block;
+}
+.nav-links a::after,
+.logo::after{
+    content: "";
+    position: absolute;
+    left:0;
+    bottom: 1px;
+    width: 100%;
+    height: 2px;
+    background-color: #05a85c;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.nav-links a:hover::after,
+.logo:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+.menu-toggle span{
+    width:27px;
+    height: 2px;
+    background: #245b40;
+    transition: 0.3s ease;
+}
+@media (max-width: 700px)
+{ .hero .navbar{
+    position: relative;
+}
+.menu-toggle{
+    display: flex;
+    margin-left: auto;
+    cursor: pointer;
+    z-index: 102;
+}
+.hero .navbar .nav-links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    padding: 25px;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.15);
+    z-index: 101;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: 0.25s ease;
+}
+.hero .navbar .nav-links.active{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.menu-toggle.active span:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.active span:nth-child(2){
+    opacity: 0;
+}
+.menu-toggle.active span:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+}
+body{
+    background-color: #f5f1E6;
+    color: #45664A;
+}
+.hero{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 20px
+}
+.green{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #B97857
+}
+.amazon{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.text{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.explore-icon{
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 1px solid rgb(30, 57, 33);
+    border-radius: 50px;
+    width: 150px;
+    background-color: #45664A;
+    color: #f5f1E6;
+}
+.blob-image{
+    width: 420px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    flex-shrink: 0;
+}
+.img{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0 50px;
+    margin-top: -20px;
+}
+.below-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.explore{
+    margin-top: 20px;
+    margin-left: 20px;
+    color:#B97857;
+}
+.discover{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 15px;
+    text-align: center;
+}
+.para{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+.wildlife{
+    margin-left: 20px;
+    margin-top: 30px;
+    border: 2px solid rgb(199, 195, 195);
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+.plants{
+    margin-left: 20px;
+    margin-top: 30px;
+    border: 2px solid rgba(199, 195, 195);
+    border-radius: 10px;
+    font-size: 19px;
+    text-align: center;
+}
+.landscapes{
+    margin-left: 20px;
+    margin-top: 30px;
+    border: 2px solid rgba(195, 195, 195);
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+.people{
+    margin-left: 20px;
+    margin-top: 20px;
+    border: 2px solid rgba(195, 195, 195);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.curious{
+    margin-top: 40px;
+    margin-left: 20px;
+    color: #B97857;
+    font-size: 20px;
+}
+.amazon-text{
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+.amazon-para{
+    text-align: center;
+    font-size: 15px;
+}
+.glass-cards{
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid #45664A;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+    border-radius: 16px;
+    padding: 30px;
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.45s cubic-bezier(0.25,1,0.5,1);
+    border-color: 0.45s ease, background 0.45s ease;
+    margin-top: 30px;
+}
+.card1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:30px;
+    margin: 20px auto 0;
+    width: min(1100px, 90%);
+}
+.quote{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    
+}
+.footerpage{
+    min-height: 80vh;
+}
+.thank{
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 20px;
+
+}
+.last{
+    margin-left: 20px;
+    text-align:center;
+}
+.footerpage p{
+    text-align: center;
+    
+}
